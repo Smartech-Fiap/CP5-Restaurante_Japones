@@ -6,7 +6,7 @@ import Cardapio from "./pages/Cardapio";
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-white text-zinc-600">
+      <div className="flex min-h-screen flex-col bg-white text-zinc-600 antialiased selection:bg-red-600 selection:text-white">
       <Navbar />
       <main className="flex-1">
         <Routes>
