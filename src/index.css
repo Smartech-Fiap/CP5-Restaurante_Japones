@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@media (prefers-reduced-transparency: reduce) {
+  .glass {
+    background-color: #18181b;
+    backdrop-filter: none;
+  }
+}
