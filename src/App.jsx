@@ -1,18 +1,27 @@
-import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Cardapio from "./pages/Cardapio";
 
 function App() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [pathname]);
+
   return (
-    <div className="min-h-screen flex flex-col bg-white text-zinc-600">
+    <div className="flex min-h-screen flex-col bg-white text-zinc-600 antialiased selection:bg-red-600 selection:text-white">
       <Navbar />
       <main className="flex-1">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/cardapio" element={<Cardapio />} />
-        </Routes>
+        <div key={pathname} className="page-enter">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/cardapio" element={<Cardapio />} />
+          </Routes>
+        </div>
       </main>
       <Footer />
     </div>
