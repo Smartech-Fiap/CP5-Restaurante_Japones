@@ -1,13 +1,21 @@
 import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Cardapio from "./pages/Cardapio";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/cardapio" element={<Cardapio />} />
-    </Routes>
+    <div className="min-h-screen flex flex-col bg-white text-zinc-600">
+      <Navbar />
+      <main className="flex-1">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cardapio" element={<Cardapio />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
