@@ -1,3 +1,6 @@
+const linkClass =
+  "inline-block text-white/70 transition duration-200 hover:text-white active:scale-95 motion-reduce:transform-none motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600";
+
 function Footer() {
   return (
     <footer className="border-t-4 border-red-600 bg-zinc-900 py-12 text-white">
@@ -6,8 +9,15 @@ function Footer() {
           <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-red-600">
             Endereço
           </h3>
-          <p className="text-sm leading-relaxed text-white/70">
-            Av. Paulista, 1000 - São Paulo/SP
+          <p className="text-sm leading-relaxed">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Av.+Paulista,+1000,+São+Paulo"
+              target="_blank"
+              rel="noreferrer"
+              className={linkClass}
+            >
+              Av. Paulista, 1000 - São Paulo/SP
+            </a>
           </p>
         </div>
         <div>
@@ -22,8 +32,10 @@ function Footer() {
           <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-red-600">
             Contato
           </h3>
-          <p className="text-sm leading-relaxed text-white/70">
-            (11) 99701-9499
+          <p className="text-sm leading-relaxed">
+            <a href="tel:+5511997019499" className={linkClass}>
+              (11) 99701-9499
+            </a>
           </p>
         </div>
       </div>
