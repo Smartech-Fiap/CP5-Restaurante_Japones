@@ -7,10 +7,19 @@ function Navbar() {
         <Link to="/" className="text-2xl font-bold">
           Sakura <span className="text-red-600">Sushi</span>
         </Link>
-        <ul className="flex gap-6">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/cardapio">Cardápio</Link></li>
-        </ul>
+        <ul className="flex items-center gap-6 font-medium">
+            <li>
+                <Link to="/" className="hover:text-red-600 transition">Home</Link>
+            </li>
+            <li>
+                <Link
+                    to="/cardapio"
+                    className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg transition"
+                >
+                Cardápio
+                </Link>
+            </li>
+    </ul>
       </div>
     </nav>
   );
