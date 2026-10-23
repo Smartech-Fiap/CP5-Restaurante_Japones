@@ -39,7 +39,7 @@ function Footer() {
           </p>
         </div>
       </div>
-      <p className="mt-10 text-center text-xs tracking-wide text-white/50">
+        <p className="mx-auto mt-10 max-w-6xl border-t border-white/10 px-6 pt-6 text-center text-xs tracking-wide text-white/50">
         © 2026 Sakura Sushi. Todos os direitos reservados.
       </p>
     </footer>
