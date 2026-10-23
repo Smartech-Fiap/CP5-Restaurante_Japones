@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -7,19 +7,33 @@ function Navbar() {
         <Link to="/" className="text-2xl font-bold tracking-tight">
           Sakura <span className="text-red-600">Sushi</span>
         </Link>
-        <ul className="flex items-center gap-6 font-medium">
+        <ul className="flex items-center gap-2 font-medium">
           <li>
-            <Link to="/" className="transition hover:text-red-600">
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) =>
+                `rounded-lg px-4 py-2 transition ${
+                  isActive
+                    ? "bg-white/10 text-white"
+                    : "text-white/70 hover:text-white"
+                }`
+              }
+            >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               to="/cardapio"
-              className="rounded-lg bg-red-600 px-4 py-2 transition hover:bg-red-700"
+              className={({ isActive }) =>
+                `rounded-lg bg-red-600 px-4 py-2 transition hover:bg-red-700 ${
+                  isActive ? "ring-2 ring-white/40" : ""
+                }`
+              }
             >
               Cardápio
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>
