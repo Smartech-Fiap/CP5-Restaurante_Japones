@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="bg-zinc-900 text-white py-8">
+    <footer className="bg-zinc-900 text-white py-8 border-t-4 border-red-600">
       <div className="max-w-6xl mx-auto px-6 grid gap-6 sm:grid-cols-3 text-center sm:text-left">
         <div>
           <h3 className="font-bold text-red-600 mb-2">Endereço</h3>
